@@ -1,0 +1,147 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box; 
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #F5D9E4;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh; 
+  text-align: center;
+  padding: 20px;
+}
+
+
+.container {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  max-width: 500px;
+  width: 100%;
+}
+
+
+#brainIcon,
+#brainHappy {
+  width: 100px;
+  margin: 0 auto 20px;
+  display: none;
+}
+
+#brainIcon.show,
+#brainHappy.show {
+  display: block;
+}
+
+
+input[type="text"] {
+  width: 100%;
+  padding: 12px 15px;
+  font-size: 1rem;
+  border: 2px solid #F4B4CE;
+  border-radius: 8px;
+  margin-bottom: 1rem;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus {
+  border-color: #EA3E9A;
+  box-shadow: 0 0 8px rgba(234, 62, 154, 0.3);
+}
+
+button {
+  background-color: #EA3E9A;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 1rem;
+  border-radius: 8px;
+  cursor: pointer;
+  margin: 10px 0;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #E10180;
+}
+
+button:active {
+  background-color: #A2194F;
+  transform: translateY(2px);
+}
+
+
+#message,
+#task,
+#motivationalMessage {
+  font-size: 1.1rem;
+  margin: 1rem 0;
+  color: #A2194F;
+}
+
+
+#confetti-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 999;
+}
+.confetti {
+  position: absolute;
+  width: 8px;      /* small square */
+  height: 8px;
+  opacity: 0.9;
+  background-color: red; /* default, will be overridden by JS */
+  border-radius: 2px;
+  animation-name: fallConfetti;
+  animation-timing-function: ease-out;
+  animation-fill-mode: forwards;
+}
+
+#brainHappy {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+ 
+}
+
+#brainHappy.show {
+  opacity: 1;
+}
+
+
+
+@media (max-width: 600px) {
+  .container {
+    padding: 1.2rem;
+  }
+
+  #brainIcon, #brainHappy {
+    width: 80px;
+  }
+
+  button {
+    font-size: 0.95rem;
+    padding: 10px 16px;
+  }
+}
+
+@keyframes fallConfetti {
+  0% {
+    transform: translateY(0) rotate(0deg);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(100vh) rotate(360deg);
+    opacity: 0;
+  }
+}

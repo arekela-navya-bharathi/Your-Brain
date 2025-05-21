@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>your brain</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <div class="container">
+    
+    
+    <img src="brain-question.png" id="brainIcon" class="show" alt="Thinking brain" />
+
+    
+    <img src="brain-happy.png" id="brainHappy" alt="Happy brain" />
+
+    
+    <div id="nameSection">
+      <input type="text" id="nameInput" placeholder="Hi sweet heart..what is your name?" />
+      <button onclick="startMotivation()">I am clever 😎</button>
+    </div>
+
+    
+    <div id="message"></div>
+    <div id="task"></div>
+
+    
+    <div id="stepSection" style="display:none;">
+      <button onclick="completeTask()">I took a step forward ✅</button>
+    </div>
+
+    
+    <div id="motivationalMessage"></div>
+  </div>
+
+ 
+  <div id="confetti-container"></div>
+
+  
+  <script src="script.js"></script>
+</body>
+</html>
